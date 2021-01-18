@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_checked="true" android:drawable="@drawable/zql_shape_button_light_blue_20dp_bg"/>
+  <item android:state_checked="false" android:drawable="@drawable/zql_shape_button_light_gray_20dp_bg"/>
+</selector>

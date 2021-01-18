@@ -1,0 +1,52 @@
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+//        maven {
+//            url "http://jcenter.bintray.com"
+//        }
+        maven { url 'https://jitpack.io' }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/google/"}
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+            // 添加emas-services插件
+//        classpath 'com.aliyun.ams:emas-services:1.0.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+//        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/google/"}
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url 'http://60.28.59.68:8082/nexus/content/groups/public/' }
+        //华为推送
+        maven {url 'http://developer.huawei.com/repo/'}
+        flatDir {
+            dirs 'libs'
+        }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext{
+
+    var=[
+            versionName:"3.0.6",
+            versionCode:1
+    ]
+
+
+}

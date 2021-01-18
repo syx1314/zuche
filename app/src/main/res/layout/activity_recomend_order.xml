@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical"
+    tools:context="com.zql.app.shop.view.company.yiweicar.YiweiCarActivity">
+
+    <com.zql.app.shop.util.view.CommonTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:title="车辆信息获取" />
+
+    <View style="@style/seg_list_line" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/spacing_5"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/zql_light_blue"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectedTextColor="@color/zql_light_blue"
+        app:tabTextColor="@color/zql_sub_tit_text" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_5"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/zql_light_blue"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectedTextColor="@color/zql_light_blue"
+        app:tabTextColor="@color/zql_sub_tit_text" />
+
+    <include layout="@layout/layout_refresh_view" />
+
+</LinearLayout>

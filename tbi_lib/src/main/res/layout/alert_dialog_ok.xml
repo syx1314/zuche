@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_height="wrap_content"
+    android:minHeight="160dp"
+    android:background="@drawable/shape_alert_bg"
+    android:gravity="center"
+    android:minWidth="220dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/alert_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7.5dp"
+        android:layout_marginTop="18dp"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/alert_context"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10.5dp"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:textColor="#000"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8ea" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/alert_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:textColor="@color/base_main_txt"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="#e8e8ea" />
+        <Button
+            android:id="@+id/alert_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

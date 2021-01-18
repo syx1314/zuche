@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        style="@style/list_card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_medium">
+
+            <LinearLayout
+                android:id="@+id/lin_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_person"
+                    style="@style/zql_tit_tv"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="5人·" />
+
+                <TextView
+                    android:id="@+id/tv_order_sort"
+                    style="@style/zql_tit_tv"
+                    android:layout_toRightOf="@id/tv_person"
+                    android:text="拼座系统定价·"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_passager_name"
+                    style="@style/zql_tit_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_order_sort"
+                    android:layout_weight="1"
+                    android:text="张三"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_main_phone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_divider"
+                style="@style/seg_list_line"
+                android:layout_below="@id/lin_title"
+                android:layout_marginTop="@dimen/spacing_medium" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/zql_tit_tv"
+                android:layout_below="@id/view_divider"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:drawableLeft="@mipmap/ic_2b_car_time"
+                android:drawablePadding="@dimen/spacing_small"
+                android:textSize="@dimen/sp_18"
+                tools:text="2019-10-29 10；20" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_time"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/p_main_price"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                tools:text="$123" />
+
+            <LinearLayout
+                android:id="@+id/lin_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_below="@id/tv_time">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:src="@mipmap/ic_2b_car_qidian"/>
+
+                <TextView
+                    android:id="@+id/tv_start_city_addr"
+                    style="@style/zql_tit_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:gravity="top|left"
+                    android:textSize="@dimen/sp_18"
+                    tools:text="北京市.东城区回答了当哈利快点哈拉黑的啦" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_start_city_addr"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/p_main_price"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"
+                    tools:text="500KM" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_end_city_addr"
+                style="@style/zql_tit_tv"
+                android:layout_below="@id/lin_start"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:drawableLeft="@mipmap/ic_2b_car_zhongdian"
+                android:drawablePadding="@dimen/spacing_small"
+                android:textSize="@dimen/sp_18"
+                tools:text="北京市.东城区" />
+
+            <View
+                android:id="@+id/view_divider1"
+                style="@style/seg_list_line"
+                android:layout_below="@id/tv_end_city_addr"
+                android:layout_marginTop="@dimen/spacing_medium" />
+
+            <TextView
+                android:id="@+id/tv_create_time"
+                style="@style/zql_tit_tv"
+                android:layout_below="@id/view_divider1"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:textSize="@dimen/sp_12"
+                tools:text="创建时间:2019-10-29 09:00" />
+
+            <TextView
+                android:id="@+id/tv_leave_words"
+
+                style="@style/zql_sub_title"
+                android:layout_alignBaseline="@id/tv_create_time"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_toRightOf="@id/tv_create_time"
+                android:ellipsize="marquee"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_12"
+                tools:text="留言:hdakj快点哈克的哈罗德哈罗德哈" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

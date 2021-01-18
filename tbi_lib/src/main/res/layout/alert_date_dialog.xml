@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alertdialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_shape_window_noradius"
+    android:backgroundTint="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/alert_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingRight="17.5dp"
+            android:paddingLeft="17.5dp"
+            android:background="@null"
+            android:text="@string/btn_cancel"
+            android:textColor="@color/txt_gray_alert"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="title"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/alert_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingRight="17.5dp"
+            android:paddingLeft="17.5dp"
+            android:background="@null"
+            android:text="@string/btn_ok"
+            android:textColor="@color/mainSTxt"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ececec" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <com.zql.app.lib.view.component.wheel.WheelView
+            android:id="@+id/alert_date_dialog_wv_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+        <com.zql.app.lib.view.component.wheel.WheelView
+            android:id="@+id/alert_date_dialog_wv_hour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+        <com.zql.app.lib.view.component.wheel.WheelView
+            android:id="@+id/alert_date_dialog_wv_mm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

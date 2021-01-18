@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--common_tab-->
+    <color name="common_tab_bg">#f6f6f6</color>
+    <color name="common_dialog_blue">#1c4066</color>
+    <color name="main_header_d">#90c7ff</color>
+    <!--p_main-->
+    <color name="p_main_nav">#878787</color>
+    <color name="p_more_blue">#365bc1</color>
+    <color name="p_main_red">#ff3d57</color>
+    <color name="p_main_yellow">#ffa21d</color>
+    <color name="welcome_red">#de3232</color>
+    <color name="travel_more_red">#e64240</color>
+
+    <!--common_transparent_base_blue-->
+    <color name="common_transparent_base_blue">#46a2ff</color>
+    <color name="dialog_header_bg">#586b94</color>
+    <!--c_order-->
+    <color name="order_status_approval">#986db2</color>
+    <color name="order_status_confirmed">#31c17c</color>
+    <color name="progress_gray">#9ac6fa</color>
+    <color name="barcolor">#bbbaba</color>
+    <color name="borderColor">#dee3de</color>
+    <color name="tipbg">#fefced</color>
+    <color name="btn_new">#fca40c</color>
+    <color name="more_new">#fcad0c</color>
+    <color name="dot_new_red">#ff141d</color>
+    <color name="dot_new_gray">#767676</color>
+    <color name="travel_standard_dilog">#33000000</color>
+    <color name="light_pink">#FFFFF2EC</color>
+
+    <!--TODO:途途帮颜色-->
+    <!--TODO:辅助色-->
+    <color name="tt_light_light_orange">#ffc600</color>
+    <color name="tt_light_orange">#ffac00</color>
+    <color name="tt_deep_light_orange">#fff7e5</color>
+    <!--TODO:主色-->
+    <color name="tt_orange">#fd8b25</color>
+    <color name="tt_deep_orange">#f47300</color>
+    <color name="tt_no_click">#e5e5e5</color>
+
+
+
+    <!--TODO 中青旅颜色-->
+    <color name="zql_orange_bg">#FFEDD0</color>
+    <color name="zql_light_orange">#FCBE3D</color>
+    <color name="zql_start_orange">#FFC221</color>
+    <color name="zql_end_orange">#FFAB29</color>
+    <color name="zql_center_orange">#FF9D03</color>
+    <color name="zql_orange">#FF8C27</color>
+    <color name="zql_orange2">#E79008</color>
+    <color name="zql_tit_text1">#FF292F38</color>
+    <color name="zql_tit_text">#333333</color>
+    <color name="zql_text_tint">#888888</color>
+    <color name="zql_sub_tit_text">#5A5A5A</color>
+    <color name="zql_sub_tit_text1">#ADB0B2</color>
+    <color name="zql_gray">#F9FAFC</color>
+    <color name="base_bg">#ffF4F4F4</color>
+    <color name="p_main_price">#FB510D</color>
+    <color name="zql_deep_light_red">#FFEBE5</color>
+    <color name="zql_light_red">#FF7F42</color>
+    <color name="zql_light_green">#25C479 </color>
+    <color name="zql_depp_light_green">#E5F9F0 </color>
+    <color name="zql_super_light_green">#ABEB60 </color>
+    <color name="zql_light_light_light_green">#62EC23 </color>
+    <color name="zql_light_light_green">#76D81E </color>
+    <color name="zql_green">#63BC13 </color>
+    <color name="zql_light_light_blue">#EEF6FF </color>
+    <color name="zql_light_blue">#5FAEFF </color>
+    <color name="zql_start_blue">#82CBFE </color>
+    <color name="zql_end_blue">#3E96FF </color>
+    <color name="zql_deep_blue">#3A93FF </color>
+    <color name="zql_no_enable">#D8D8D8 </color>
+    <color name="no_enable_text_tit">#9BA1A6</color>
+    <color name="no_enable_text_sub_tit">#B1B9C0</color>
+    <color name="base_main_txt">#66696F</color>
+    <color name="view_divider">#E9E9E9</color>
+    <color name="view_divider_gray">#E8E8E8</color>
+    <color name="color_bbb">#BBBBBB</color>
+    <color name="zql_color_light_pink">#FFF5E5</color>
+    <color name="zql_color_light_gray">#F8F8F8</color>
+    <color name="zql_light_pink">#FF5B7B</color>
+</resources>

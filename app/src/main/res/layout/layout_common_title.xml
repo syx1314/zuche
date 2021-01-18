@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_medium"
+                android:src="@mipmap/ic_common_back_right" />
+
+            <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_medium"
+                android:src="@mipmap/ic_header_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/txt_main_sp16"
+            android:layout_width="0dp"
+            android:textColor="@color/zql_tit_text"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="筛选条件" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right">
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_medium"
+                android:text="重置"
+                android:textColor="@color/tt_orange"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/seg_list_line"
+        android:visibility="gone"/>
+</LinearLayout>

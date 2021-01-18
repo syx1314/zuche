@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tbi Lib</string>
+
+    <string name="title_prompt">友情のヒント</string>
+    <string name="menu_settings">設置</string>
+    <string name="check_connection">検査ネットワーク</string>
+    <string name="check_sd">メモリカードをチェックして下さい。</string>
+    <string name="btn_cancel">キャンセル</string>
+    <string name="btn_ok">確定</string>
+    <string name="btn_yes">は</string>
+    <string name="btn_no">否</string>
+    <string name="btn_exit">名目</string>
+    <string name="warn">ヒント</string>
+    <string name="btn_del">削除</string>
+
+    <!-- 定位权限未开放的提示 -->
+    <string name="gps_network_permission">このためにはネットの権限を使って、ネットの権限を開く</string>
+
+    <string name="main_war_select_point">再セット座標を再設置して</string>
+</resources>

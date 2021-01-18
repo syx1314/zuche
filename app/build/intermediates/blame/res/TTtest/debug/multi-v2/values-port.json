@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\zqlShop\\app\\build\\intermediates\\incremental\\mergeTTtestDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yuanyujin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\2bbd71720d610e9ac92144f2a4c20257\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\zqlShop\\app\\build\\intermediates\\incremental\\mergeOnlineReleaseResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "D:\\zqlShop\\app\\src\\main\\res\\values-v19\\values.xml",
+                    "from": {
+                        "startLines": "4,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "133,57",
+                        "endColumns": "60,54",
+                        "endOffsets": "189,107"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,116",
+                        "endColumns": "60,54",
+                        "endOffsets": "111,166"
+                    }
+                }
+            ]
+        }
+    ]
+}

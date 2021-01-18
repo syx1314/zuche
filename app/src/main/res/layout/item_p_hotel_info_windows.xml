@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/spacing_small"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_small"
+        android:textSize="@dimen/sp_12"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/base_main_txt"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/btn_navigation"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/spacing_20"
+        android:paddingRight="@dimen/spacing_20"
+        android:textSize="@dimen/sp_12"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/tt_light_orange"
+        android:text="查看地图" />
+
+</LinearLayout>

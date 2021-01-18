@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\zqlShop\\app\\build\\intermediates\\incremental\\mergeOnlineReleaseResources\\merged.dir\\values-v9\\values-v9.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yuanyujin\\.gradle\\caches\\transforms-1\\files-1.1\\android-times-square-1.6.5.aar\\c397d59c6e9788faf80e31d834c749ca\\res\\values-v9\\values-v9.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "189",
+                        "endColumns": "55",
+                        "endOffsets": "240"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

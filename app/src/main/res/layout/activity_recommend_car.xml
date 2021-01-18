@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/base_bg"
+    tools:context="com.zql.app.shop.view.company.yiweicar.YiweiCarActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/spacing_4">
+        <TextView
+            android:id="@+id/tv_cur_position"
+            style="@style/zql_tit_tv"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/spacing_4"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:drawableLeft="@mipmap/ic_hotel_locate"
+            android:drawableRight="@mipmap/ic_hotel_right"
+            android:text="定位中"/>
+        <com.zql.app.shop.util.view.CommonTitleView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            app:title="附近的订单"
+            app:left_visable="false"/>
+        <TextView
+            android:id="@+id/tv_shaixuan"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTint="@color/zql_center_orange"
+            android:drawableLeft="@mipmap/ic_member_set"
+            android:text="筛选"/>
+    </RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <include layout="@layout/layout_refresh_view"/>
+</LinearLayout>

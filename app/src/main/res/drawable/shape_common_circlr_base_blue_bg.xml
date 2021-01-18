@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 填充 -->
+    <solid android:color="@color/white" />
+    <!-- stroke -->
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/base_blue" />
+    <!-- 边角 -->
+    <corners android:radius="10dp" />
+</shape>

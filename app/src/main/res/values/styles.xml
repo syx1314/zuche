@@ -1,0 +1,968 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:typeface">monospace</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+    </style>
+    <!-- 自定义Dialog主题 -->
+    <style name="BottomDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    </style>
+
+    <!-- 自定义Dialog动画 -->
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/alert_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/alert_dialog_exit</item>
+    </style>
+    <!-- 透明的主题-->
+    <style name="MyTranslucentAppTheme" parent="AppTheme.Base">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/base_sub_txt</item>
+        <!--no actionbar and title-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="accountInputBorder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="accountEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="buttonBarButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- 继承 -->
+    <style name="accountButtonStyle" parent="@style/buttonBarButtonStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--提示框样式-->
+    <!--提示框主体样式-->
+    <style name="AppTheme.AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">    <!-- Used for the buttons -->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--cp_common_tab_layout-->
+    <style name="cp_common_tab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@drawable/tab_selector_checded_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--RadioBtn选中样式-->
+    <style name="radio_checked">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/rabio_selector_checded</item>
+    </style>
+
+    <style name="rb_star">
+
+        <item name="android:background">@drawable/sel_rb_gray_light_blue_bg</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/sel_rb_text_black_white</item>
+    </style>
+
+    <!--p_main_nav-->
+    <style name="p_main_nav_box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="p_main_nav_img">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="p_main_nav_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/p_main_nav</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--p_main__color-->
+    <style name="p_main_color_box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/shape_common_rectangle_3</item>
+        <item name="android:paddingLeft">@dimen/spacing_medium</item>
+    </style>
+    <!--tab_red_dot-->
+    <style name="tab_red_dot">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/shape_dot_red</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <!--tab_red_dot_box-->
+    <style name="tab_red_dot_box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/base_blue</item>
+        <item name="colorButtonNormal">@color/grey</item>
+    </style>
+    <!-- 酒店查询基本样式 -->
+    <style name="txt_p_query">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/base_sub_txt</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">9dp</item>
+    </style>
+    <!-- ic_gray_xs_right-->
+    <style name="ic_gray_xs_right">
+        <item name="android:layout_width">6dp</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@mipmap/ic_c_right</item>
+    </style>
+    <!--酒店 tab_red_dot-->
+    <style name="tab_red_dot_sml">
+        <item name="android:layout_width">5dp</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:layout_marginLeft">25.5dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/shape_dot_red</item>
+        <!--<item name="android:visibility">gone</item>-->
+    </style>
+    <!--酒店 tab-->
+    <style name="tab_common_hotel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--酒店 tab icon-->
+    <style name="icon_common_hotel_tab">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <!--酒店 tab txt-->
+    <style name="txt_common_hotel_tab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <!--酒店 tab txt-->
+    <style name="txt_common_hotel_rdoBtn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:drawableTop">@drawable/common_selector_button_red_white</item>
+    </style>
+    <!--酒店 search-->
+    <style name="txt_hotel_search">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--酒店 list txticon-->
+    <style name="icon_hotel_list">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">11dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+    <!--酒店 details icon-->
+    <style name="icon_hotel_details">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">@dimen/spacing_small</item>
+    </style>
+    <!--酒店 details txt-->
+    <style name="txt_hotel_details">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--酒店 details right icon-->
+    <style name="icon_hotel_details_goright">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:src">@mipmap/ic_hotel_right_blue</item>
+        <item name="android:layout_marginLeft">6dp</item>
+    </style>
+    <!--酒店 details seg_line_vertical-->
+    <style name="seg_line_vertical_hotel" parent="@style/seg_line_vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:background">@color/base_sub_txt</item>
+    </style>
+    <!--酒店 预定 godight-->
+    <style name="icon_goright_black_sml">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:src">@mipmap/ic_common_right_gray</item>
+    </style>
+    <!--酒店 担保 过期-->
+    <style name="imgbtn_sel_down">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/shape_right_radio_orange</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:src">@mipmap/ic_hotel_date_down</item>
+        <item name="tint">@color/white</item>
+    </style>
+    <!-- 橘色细长按钮 16sp-->
+    <style name="btn_common_orange_thin32" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@drawable/common_button_orange_solid</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <!-- 城市选择btn-->
+    <style name="btn_cp_common_city" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@drawable/shape_border_gray_bg_white</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- 机票城市选择btn-->
+    <style name="btn_cp_common_air_city" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@drawable/shape_common_gray_3dp_radious</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--弹出checkbox 样式-->
+    <style name="dialog_item_chk">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:drawableRight">@drawable/common_filter_chk</item>
+    </style>
+    <!--弹出checkbox txt样式-->
+    <style name="dialog_item_chk_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--酒店价格筛选 样式-->
+    <style name="dialog_hotel_filter_et" parent="@style/et_common">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:background">@drawable/shape_radio_border_deepgray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <!--特殊要求btn 样式-->
+    <style name="btn_hotel_special">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@drawable/selector_checded_bg_blue_white</item>
+        <item name="android:textColor">@color/selector_checded_text_blue_white</item>
+    </style>
+    <!--特殊要求btn 样式-->
+    <style name="txt_hotel_special">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">@dimen/spacing_medium</item>
+        <item name="android:paddingTop">@dimen/spacing_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+    </style>
+    <!--基本right icon-->
+    <style name="ic_common_goright">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/ic_right_orange</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="ic_common_goright_black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/ic_common_right_gray</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--member 提示txt-->
+    <style name="txt_member_tip">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/base_con_txt</item>
+        <item name="android:paddingLeft">@dimen/spacing_medium</item>
+        <item name="android:paddingTop">@dimen/spacing_medium</item>
+        <item name="android:paddingBottom">@dimen/spacing_small</item>
+        <item name="android:paddingRight">@dimen/spacing_medium</item>
+    </style>
+    <!--member 扫码下载-->
+    <style name="layout_common_member_scan">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingRight">50dp</item>
+    </style>
+    <!--common-->
+    <!-- 橘色长按钮 -->
+    <style name="btn_common_orange_common" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/common_button_orange_solid</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+    <!-- 底部 橘色下一步按钮 -->
+    <style name="btn_common_orange_bottom_left" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/button_selector_enable_gray_orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- 设置通用订单的Tab的字体大小 -->
+    <style name="MyCommonOrderTopTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 大按钮 -->
+    <style name="btn_common_large" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+        <item name="android:background">@drawable/button_selector_enable</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:enabled">true</item>
+    </style>
+
+    <!-- 大按钮 -->
+    <style name="btn_common_large_blue_box" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+        <item name="android:background">@drawable/shape_radio_stroke_blue_bg</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:enabled">false</item>
+    </style>
+    <!-- 大按钮 -->
+    <style name="btn_common_large_red_box" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+        <item name="android:background">@drawable/shape_radio_stroke_red_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+    <!--小按钮[验证码]-->
+    <style name="btn_common_small" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/button_height_small</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@drawable/button_selector_enable</item>
+        <item name="android:enabled">false</item>
+
+    </style>
+    <!--弹出单选 样式-->
+    <style name="dialog_item_radiobtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:drawableRight">@drawable/common_radiobtn</item>
+    </style>
+    <!--弹出单选 样式-->
+    <style name="dialog_item_radiobtn2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:drawableRight">@mipmap/ic_common_single_choose_blank</item>
+    </style>
+    <!--txt_main_sp16-->
+    <style name="txt_main_sp16_tb6" parent="txt_main_sp16">
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingTop">6dp</item>
+    </style>
+    <!--cp_common_header_layout-->
+    <style name="cp_common_header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- 小按钮 -->
+    <style name="btn_common_sml_service" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">175dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/common_button_blue_solid_sml</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+    <!-- common_header_back_ic -->
+    <style name="btn_common_header_back">
+        <item name="android:layout_width">9dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@mipmap/ic_header_back</item>
+    </style>
+
+    <style name="p_travel_filtr_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="p_travel_filtr_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/common_activity_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/common_activity_bottom_out</item>
+    </style>
+    <!--btn_p_travel_reserve 样式-->
+    <style name="btn_p_travel_reserve">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_marginLeft">7.5dp</item>
+        <item name="android:layout_marginRight">7.5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:maxLength">10</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:background">@drawable/selector_checded_bg_gray_orange</item>
+        <item name="android:textColor">@drawable/selector_checded_color_black_white</item>
+    </style>
+    <!--btn_dot_radio 样式-->
+    <style name="btn_dot_radio_13sp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/radio_dot_selector_checded</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/base_main_txt</item>
+    </style>
+    <!-- 大按钮 -->
+    <style name="btn_common_large_orange" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+        <item name="android:background">@drawable/button_selector_enable_orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+    <!--旅游选择目的地左侧btn 样式-->
+    <style name="btn_p_travel_destination_left">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@drawable/selector_checded_bg_gray_white</item>
+        <item name="android:textColor">@drawable/selector_checded_color_black_bule</item>
+    </style>
+    <!--旅游首页btn 样式-->
+    <style name="btn_p_travel_index_nav">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="myDialogTheme" parent="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item><!--除去背景色-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="tab_size_16" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="tab_size_15" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="tab_size_14" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--火车筛选 样式-->
+    <style name="dialog_train_rbtn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minWidth">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/zql_sub_tit_text</item>
+        <item name="android:drawableLeft">@drawable/common_filter_chk_sml</item>
+        <item name="android:drawablePadding">@dimen/c_train_choose_sit_padding</item>
+    </style>
+    <!--火车筛选 样式-->
+    <style name="dialog_train_filter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--火车筛选 样式字体-->
+    <style name="dialog_train_tv" parent="txt_main_sp13">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">94dp</item>
+        <item name="android:textColor">@color/zql_center_orange</item>
+    </style>
+    <!--火车特别提示 样式字体-->
+    <style name="train_main_sp14" parent="txt_main_sp13">
+        <item name="android:textSize">14sp</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="train_note_dot" parent="txt_main_sp13">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/base_blue</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_marginTop">3.5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">•</item>
+    </style>
+    <!-- new_btn-->
+    <style name="btn_new_yellow" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/new_btn_yellow_solid</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <!--TODO:新版商旅家-->
+    <style name="btn_new_blue" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/shape_query_btn_gradient_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="btn_re_new_blue" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/shape_btn_gradient_blue_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="btn_re_new_gray" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/shape_btn_gradient_blue_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <!--TODO:个人版登录按钮-->
+    <style name="btn_login_blue" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/shape_query_btn_gradient_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <!--TODO:途途帮登录按钮-->
+    <style name="btn_login_orange" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/shape_btn_t_login_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="btn_radio_orange" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/shape_orange_radio_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <style name="btn_circle_orange" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_orange_circle_bg</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <style name="btn_rectangle_orange" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">53dp</item>
+        <item name="android:background">@drawable/shape_orange_rectangel_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <style name="btn_rectangle_deep_orange" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">53dp</item>
+        <item name="android:background">@drawable/shape_deep_orange_rectangel_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <style name="btn_new_blue_box" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@drawable/shape_radio_stroke_blue_box</item>
+        <item name="android:textColor">@color/tt_light_orange</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="btn_new_red" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:background">@drawable/shape_btn_gradient_red_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <!-- fragment_c_main_new-->
+    <style name="txt_new_blue15" parent="txt_main_sp13">
+        <item name="android:textColor">@color/base_blue</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+    <!-- fragment_c_main_new_tv-->
+    <style name="txt_new_nav16" parent="txt_main_sp13">
+        <item name="android:layout_marginBottom">@dimen/c_main_new_mb</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/no_enable_text_tit</item>
+    </style>
+    <!--TODO: 差旅标准对话框-->
+    <style name="MyTravelDialogStyle">
+        <item name="android:windowBackground">@color/travel_standard_dilog</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!--TODO:评分控件style-->
+    <style name="style_rbar">
+
+        <item name="android:layout_height">22dp</item>
+        <item name="android:minHeight">11dp</item>
+        <item name="android:maxHeight">11dp</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">3.0</item>
+        <item name="android:stepSize">0.5</item>
+        <item name="android:progressDrawable">@drawable/five_rating_bar</item>
+    </style>
+
+    <style name="TRM_ANIM_STYLE">
+        <item name="android:windowEnterAnimation">@anim/trm_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/trm_popup_exit</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="tv_me_top_bottom_tv">
+        <item name="android:textColor">@color/base_main_txt</item>
+        <item name="android:drawablePadding">@dimen/spacing_small</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="BottomListDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@drawable/shape_top_white_radio</item>
+    </style>
+
+    <style name="iv_company_logo">
+        <item name="android:layout_width">@dimen/spacing_12</item>
+        <item name="android:layout_height">@dimen/spacing_12</item>
+        <item name="android:background">@null</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="zql_tit_et_common">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/zql_tit_text</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColorHint">@color/zql_text_tint</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+    <style name="zql_sub_title">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/zql_sub_tit_text</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+    <style name="zql_tit_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/zql_tit_text</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <style name="zql_tit_et_common_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/zql_tit_text1</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColorHint">@color/zql_text_tint</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+    <style name="zql_hint_common">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/zql_text_tint</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="zql_red_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/p_main_price</item>
+    </style>
+    <style name="list_card_bg">
+        <item name="android:layout_marginLeft">@dimen/spacing_5</item>
+        <item name="android:layout_marginRight">@dimen/spacing_5</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_5</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <style name="list_card_bg2">
+        <item name="android:paddingLeft">@dimen/spacing_5</item>
+        <item name="android:paddingRight">@dimen/spacing_5</item>
+        <item name="android:paddingBottom">@dimen/spacing_5</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+    <!--水平分割线-->
+    <style name="seg_list_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/zql_line</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <!--水平虚线—分割线-->
+    <style name="seg_list_dash_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@drawable/shape_line_dash</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <!--seg竖着的一条间隔线-->
+    <style name="seg_line_vertical">
+        <item name="android:background">@color/zql_line</item>
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="tab_style" >
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="style_order_bottom">
+        <item name="android:paddingTop">@dimen/spacing_7</item>
+        <item name="android:paddingBottom">@dimen/spacing_7</item>
+        <item name="android:paddingLeft">@dimen/spacing_medium</item>
+        <item name="android:paddingRight">@dimen/spacing_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="btn_style_15_7">
+        <item name="android:paddingTop">@dimen/spacing_7</item>
+        <item name="android:paddingBottom">@dimen/spacing_7</item>
+        <item name="android:paddingLeft">@dimen/spacing_medium</item>
+        <item name="android:paddingRight">@dimen/spacing_medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="btn_style_7_5">
+        <item name="android:paddingTop">@dimen/spacing_5</item>
+        <item name="android:paddingBottom">@dimen/spacing_5</item>
+        <item name="android:paddingLeft">@dimen/spacing_7</item>
+        <item name="android:paddingRight">@dimen/spacing_7</item>
+        <item name="android:gravity">center</item>
+    </style>
+    </resources>

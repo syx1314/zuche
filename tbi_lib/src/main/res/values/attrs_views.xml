@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TextView（RadioButton/CheckBox）共通value（开始） -->
+    <declare-styleable name="TextView">
+        <attr name="key" format="string" />
+        <attr name="value" format="string" />
+    </declare-styleable>
+    <!-- TextView（RadioButton/CheckBox）共通value（结束） -->
+</resources>

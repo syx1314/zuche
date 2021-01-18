@@ -1,0 +1,60 @@
+<resources>
+    <!-- text size -->
+    <!--<dimen name="text_size_xxsmall"></dimen>-->
+    <!--<dimen name="text_size_xsmall"></dimen>-->
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <!--<dimen name="text_size_xlarge"></dimen>-->
+
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_23">23sp</dimen>
+    <dimen name="sp_26">26sp</dimen>
+    <dimen name="sp_50">50sp</dimen>
+    <dimen name="sp_content3">14dp</dimen>
+
+    <dimen name="text_size_title">18sp</dimen>
+
+    <!-- margin or padding -->
+    <!--<dimen name="spacing_tiny"></dimen>-->
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_medium">15dp</dimen>
+    <dimen name="spacing_13">13dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_18">18dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_23">23dp</dimen>
+    <dimen name="spacing_large">30dp</dimen>
+    <dimen name="spacing_35">35dp</dimen>
+    <dimen name="spacing_40">40dp</dimen>
+    <dimen name="spacing_45">45dp</dimen>
+
+    <dimen name="spacing_5">5dp</dimen>
+    <dimen name="spacing_7">7dp</dimen>
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_9">9dp</dimen>
+    <!--<dimen name="spacing_huge"></dimen>-->
+
+
+    <dimen name="space_40">40dp</dimen>
+
+    <!-- typical sizes of views -->
+    <dimen name="button_height_small">30dp</dimen>
+    <dimen name="button_height_medium">47dp</dimen>
+    <!--<dimen name="button_height_large"></dimen>-->
+    <dimen name="ll_input_height">44dp</dimen>
+    <!--输入框高-->
+    <dimen name="c_main_new_mt">10dp</dimen>
+    <dimen name="c_main_new_mb">3dp</dimen>
+</resources>

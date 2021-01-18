@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="month_name_format">yyyy年MM月</string>
+    <!--不可选日期背景-->
+    <color name="calendar_active_month_bg">#ffffffff</color>
+</resources>

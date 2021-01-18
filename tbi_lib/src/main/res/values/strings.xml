@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Tbi Lib</string>
+
+    <string name="title_prompt">友情提示</string>
+    <string name="menu_settings">设置</string>
+    <string name="check_connection">检查网络</string>
+    <string name="check_sd">请检查内存卡</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_ok">确定</string>
+    <string name="btn_yes">是</string>
+    <string name="btn_no">否</string>
+    <string name="btn_exit">退出</string>
+    <string name="btn_close">关闭</string>
+    <string name="warn">提示</string>
+    <string name="btn_del">删除</string>
+    <string name="wallet_add_new">添加新卡</string>
+    <string name="welcome">立即体验</string>
+    <string name="submit_ok">操作成功!</string>
+
+    <string name="msg_toolbar_no_found">ToolBar未注入:\n1、布局文件是否包含了ToolBar；2、java代码是否正确使用了inject操作?</string>
+
+    <!-- 定位权限未开放的提示 -->
+    <string name="gps_network_permission">请为此应用打开使用网络的权限</string>
+
+    <string name="main_war_select_point">是否重新设置该坐标</string>
+
+    <!--电商app通用string-->
+    <string name="login">登录</string>
+    <string name="c_bind_title">绑定企业账号</string>
+    <string name="register">注册</string>
+
+    <string name="phone_hint">手机号</string>
+    <string name="ververify_code">发送验证码</string>
+    <string name="btn_next">下一步</string>
+
+
+
+    <!--选择员工弹出文字-->
+    <string name="dialog_common_choice_employee_cannot">差旅政策或审批规则不同\n不能同时选择</string>
+
+    <string name="day">天</string>
+    <string name="hour">小时</string>
+    <string name="fen">分</string>
+    <string name="miao">秒</string>
+
+    <string name="common_week_mon">周一</string>
+    <string name="common_week_tue">周二</string>
+    <string name="common_week_wed">周三</string>
+    <string name="common_week_thu">周四</string>
+    <string name="common_week_fri">周五</string>
+    <string name="common_week_sat">周六</string>
+    <string name="common_week_sun">周日</string>
+
+
+    <string name="date_formet_1">MM月dd日</string>
+</resources>
