@@ -51,8 +51,7 @@ public class FuJInFragment extends CommonTabContentFragment implements YiWeiCarA
 
     @BindView(R.id.tv_shaixuan)
     TextView tvShaixuan;
-    Unbinder unbinder;
-    Unbinder unbinder1;
+  
     private PositionEntity curPosition;
     private YiWeiCarAdapter adapter;
     FilterBean filterBean;
@@ -204,11 +203,7 @@ public class FuJInFragment extends CommonTabContentFragment implements YiWeiCarA
     }
 
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
+   
 
     @OnClick(R.id.tv_shaixuan)
     public void onViewClicked() {
