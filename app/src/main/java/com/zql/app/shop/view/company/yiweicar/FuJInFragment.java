@@ -150,6 +150,9 @@ public class FuJInFragment extends CommonTabContentFragment implements YiWeiCarA
             if (data != null) {
                 CameraPosition p = data.getParcelableExtra("p");
                 if (p != null && p.target != null) {
+                    if (curPosition==null){
+                        curPosition=new PositionEntity();
+                    }
                     curPosition.latitue = p.target.latitude;
                     curPosition.longitude = p.target.longitude;
                     getRefreshViewUtils().reLoad();
